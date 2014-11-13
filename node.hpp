@@ -6,6 +6,7 @@ class Comparable{
 public:
 	virtual bool operator<(const Comparable&) const = 0;
 	virtual bool operator<=(const Comparable&) const = 0;
+	virtual bool operator==(const Comparable&) const = 0;
 };
 
 class Node{
@@ -36,6 +37,7 @@ public:
 	float get_v() const;
 	bool operator<(const Comparable&) const;
 	bool operator<=(const Comparable&) const;
+	bool operator==(const Comparable&) const;
 };
 
 

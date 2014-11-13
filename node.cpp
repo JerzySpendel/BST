@@ -21,6 +21,14 @@ bool Number::operator<=(const Comparable& n) const{
 	return false;
 }
 
+bool Number::operator==(const Comparable& n) const{
+	const Number& t = dynamic_cast<const Number&>(n);
+	if(v == t.v){
+		return true;
+	}
+	return false;
+}
+
 float Number::get_v() const{
 	return v;
 }

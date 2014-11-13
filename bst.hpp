@@ -9,6 +9,7 @@ public:
 	BST();
 	Node* get_root() const;
 	void add(Comparable* v, Node* root = nullptr);
+	Node* search(Comparable *v, Node* root = nullptr);
 };
 
 #endif

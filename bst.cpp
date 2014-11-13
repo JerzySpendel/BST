@@ -29,3 +29,24 @@ void BST::add(Comparable *v, Node* root){
 		add(v, root->get_right());
 	}
 }
+
+Node* BST::search(Comparable* v, Node* root){
+	if(root == nullptr){
+		root = m_root;
+	}
+	if(*(root->get_v()) == *v){
+		return root;
+	}
+	if(*v < *(root->get_v())){
+		if(root->get_left() == nullptr){
+			return nullptr;
+		}
+		return search(v, root->get_left());
+	}
+	else{
+		if(root->get_right() == nullptr){
+			return nullptr;
+		}
+		return search(v, root->get_right());
+	}
+}
